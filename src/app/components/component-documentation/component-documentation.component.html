@@ -1,0 +1,60 @@
+<app-card [icon]="faInfoCircle" [title]="'Loader'" [subTitle]="'Components'">
+  <div card-footer>
+    <div>
+      <label>Count of seconds: </label>
+      <input
+        #countOfSecondsRef
+        card-footer
+        type="number"
+        min="1"
+        [value]="loaderCountOfSeconds"
+        (input)="loaderCountOfSeconds = +countOfSecondsRef.value"
+      >
+    </div>
+
+    <button (click)="showLoader()" style="margin-top: 10px;">Show Loader for {{ loaderCountOfSeconds }} seconds</button>
+  </div>
+</app-card>
+
+<app-card [icon]="faInfoCircle" [title]="'Top of Page'" [subTitle]="'Components'">
+  <p card-body>Scroll {{ borderValue }}px down the page to show "go to top" button.</p>
+
+  <input
+    card-footer
+    type="number"
+    [value]="borderValue"
+    (input)="topOfPageInputChanged($event)"
+  >
+</app-card>
+
+<app-card [icon]="faInfoCircle" [title]="'Star Ratings'" [subTitle]="'Components'">
+  <app-star-ratings card-body [rating]="rating" [title]="'Rating is: ' + rating"></app-star-ratings>
+
+  <input
+    card-footer
+    type="number"
+    max="5"
+    min="0"
+    step="0.5"
+    [value]="rating"
+    (input)="ratingInputChanged($event)"
+  >
+</app-card>
+
+<app-card [icon]="faInfoCircle" [title]="'Progress bar'" [subTitle]="'Components'">
+  <app-progress-bar card-body [value]="progressValue"></app-progress-bar>
+
+  <button card-footer (click)="progressValue = 75;">Update</button>
+</app-card>
+
+<app-card [icon]="faInfoCircle" [title]="'Accordion'" [subTitle]="'Components'">
+  <app-accordion card-body [items]="accordionItems"></app-accordion>
+</app-card>
+
+<app-card [icon]="faInfoCircle" [title]="'Card'" [subTitle]="'Components'">
+  <p card-footer>Footer content</p>
+  <p card-body>Body content</p>
+</app-card>
+
+<app-top-of-page card-body [borderValue]="borderValue"></app-top-of-page>
+<app-loader [isLoading]="isLoaderLoading"></app-loader>
