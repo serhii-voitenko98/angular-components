@@ -1,0 +1,26 @@
+<div class="accordion-container">
+  <div
+    *ngFor="let item of items"
+    class="item"
+  >
+    <div
+      class="header"
+      (click)="toggle(item)"
+    >
+      <h4>{{ item.title }}</h4>
+      <div
+        class="icon"
+        [class.is-expanded]="item.isExpanded"
+      >
+        <fa-icon [icon]="faChevronDown"></fa-icon>
+      </div>
+    </div>
+
+    <div
+      class="content"
+      [class.is-expanded]="item.isExpanded"
+    >
+      {{ item.content }}
+    </div>
+  </div>
+</div>
