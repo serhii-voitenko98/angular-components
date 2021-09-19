@@ -2,10 +2,20 @@ main {
   padding: 20px;
 }
 
-app-card {
-  display: block;
+app-toolbar {
+  ul {
+    li {
+      cursor: pointer;
 
-  &:not(:last-child) {
-    margin-bottom: 20px;
+      span {
+        border-bottom: 1px solid transparent;
+      }
+
+      &.active {
+        span {
+          border-color: white;
+        }
+      }
+    }
   }
 }
