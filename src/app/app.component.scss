@@ -1,0 +1,11 @@
+main {
+  padding: 20px;
+}
+
+app-card {
+  display: block;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
