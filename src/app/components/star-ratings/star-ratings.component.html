@@ -1,0 +1,19 @@
+<div [title]="title">
+  <fa-icon
+  *ngFor="let star of fullStars"
+  [icon]="faStar"
+  [styles]="{'stroke': color, 'color': color}"
+></fa-icon>
+
+<fa-icon
+  *ngIf="hasHalfStar"
+  [icon]="faStarHalfAlt"
+  [styles]="{'stroke': color, 'color': color}"
+></fa-icon>
+
+<fa-icon
+  *ngFor="let star of emptyStars"
+  [icon]="faStarEmpty"
+  [styles]="{'stroke': color, 'color': color}"
+></fa-icon>
+</div>
