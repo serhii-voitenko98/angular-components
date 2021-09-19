@@ -1,0 +1,47 @@
+<app-card [icon]="faInfoCircle" [title]="'Credit Card Formatter'" [subTitle]="'Pipes'">
+  <div card-body>
+    <p>
+      <span>Raw (mastercard+visa): 1111222233334444</span>
+      <br>
+      <span>Piped result: <b>{{ '1111222233334444' | appCreditCardFormatter }}</b></span>
+    </p>
+    <hr style="margin: 5px 0;">
+    <p>
+      <span>Raw (american express): 111122223333444</span>
+      <br>
+      <span>Piped result: <b>{{ '111122223333444' | appCreditCardFormatter }}</b></span>
+    </p>
+    <hr style="margin: 5px 0;">
+    <p>
+      <span>Raw: 1111V2223K33C444</span>
+      <br>
+      <span>Piped result: <b>{{ '1111V2223K33C444' | appCreditCardFormatter }}</b></span>
+    </p>
+    <hr style="margin: 5px 0;">
+    <p>
+      <span>Raw: 111122223333444455556666</span>
+      <br>
+      <span>Piped result: <b>{{ '111122223333444455556666' | appCreditCardFormatter }}</b></span>
+    </p>
+    <hr style="margin: 5px 0;">
+    <p>
+      <span>Raw: 111122223333</span>
+      <br>
+      <span>Piped result: <b>{{ '111122223333' | appCreditCardFormatter }}</b></span>
+    </p>
+  </div>
+</app-card>
+
+<app-card [icon]="faInfoCircle" [title]="'Truncate'" [subTitle]="'Pipes'">
+  <p card-body>
+    {{ textToTruncate | appTruncate: truncateCharacters }}
+  </p>
+
+  <input
+    card-footer
+    type="number"
+    min="1"
+    [value]="truncateCharacters"
+    (input)="truncateTextChanged($event)"
+  >
+</app-card>
