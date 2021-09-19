@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import './styles/colors';
+@import './styles/mixins';
+@import './styles/breakpoints';
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
