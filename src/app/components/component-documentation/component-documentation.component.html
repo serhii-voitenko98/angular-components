@@ -1,3 +1,19 @@
+<app-card [icon]="faInfoCircle" [title]="'Credit Card Input'" [subTitle]="'Components'">
+  <div card-body>
+    <app-credit-card-input
+      [creditCardNumber]="'4545787654567654'"
+      [isReadOnly]="false"
+    ></app-credit-card-input>
+
+    <br>
+
+    <app-credit-card-input
+      [creditCardNumber]="'4545787654567654'"
+      [isReadOnly]="true"
+    ></app-credit-card-input>
+  </div>
+</app-card>
+
 <app-card [icon]="faInfoCircle" [title]="'Loader'" [subTitle]="'Components'">
   <div card-footer>
     <div>
@@ -12,7 +28,15 @@
       >
     </div>
 
-    <button (click)="showLoader()" style="margin-top: 10px;">Show Loader for {{ loaderCountOfSeconds }} seconds</button>
+    <div>
+      <label>Type: </label>
+      <select [(ngModel)]="loaderType">
+        <option [value]="LoaderTypeEnum.CIRCULAR">{{ LoaderTypeEnum.CIRCULAR }}</option>
+        <option [value]="LoaderTypeEnum.LOADING">{{ LoaderTypeEnum.LOADING }}</option>
+      </select>
+    </div>
+
+    <button (click)="showLoader()" style="margin-top: 10px;">Show {{ loaderType }} Loader for {{ loaderCountOfSeconds }} seconds</button>
   </div>
 </app-card>
 
@@ -57,4 +81,4 @@
 </app-card>
 
 <app-top-of-page card-body [borderValue]="borderValue"></app-top-of-page>
-<app-loader [isLoading]="isLoaderLoading"></app-loader>
+<app-loader [isLoading]="isLoaderLoading" [loaderType]="loaderType"></app-loader>

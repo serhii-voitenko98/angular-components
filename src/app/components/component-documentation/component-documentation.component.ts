@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 import { AccordionItem } from '../accordion/accordion-item.interface';
+import { LoaderTypeEnum } from '../loader/loader-type.enum';
 
 @Component({
   selector: 'app-component-documentation',
@@ -28,6 +29,8 @@ export class ComponentDocumentationComponent {
   borderValue = 400;
   isLoaderLoading = false;
   loaderCountOfSeconds = 2;
+  loaderType = LoaderTypeEnum.CIRCULAR;
+  LoaderTypeEnum = LoaderTypeEnum;
 
   ratingInputChanged(event: Event): void {
     const target = event.target as HTMLInputElement;
@@ -46,9 +49,13 @@ export class ComponentDocumentationComponent {
   showLoader(): void {
     this.isLoaderLoading = true;
 
-    console.log(this.isLoaderLoading);
-
-
     setTimeout(() => this.isLoaderLoading = false, this.loaderCountOfSeconds * 1000);
+  }
+
+  loaderTypeChanged(event: Event): void {
+    const target = event.target as HTMLSelectElement;
+
+    const value = target.value as LoaderTypeEnum;
+    this.loaderType = value;
   }
 }

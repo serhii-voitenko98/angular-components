@@ -8,6 +8,7 @@ import { AccordionModule } from '../accordion/accordion.module';
 import { TopOfPageModule } from '../top-of-page/top-of-page.module';
 import { ProgressBarModule } from '../progress-bar/progress-bar.module';
 import { StarRatingsModule } from '../star-ratings/star-ratings.module';
+import { CreditCardInputModule } from '../credit-card-input/credit-card-input.module';
 import { ComponentDocumentationComponent } from './component-documentation.component';
 import { ComponentDocumentationRouterModule } from './component-documentation-router.module';
 
@@ -24,6 +25,7 @@ import { ComponentDocumentationRouterModule } from './component-documentation-ro
     TopOfPageModule,
     ProgressBarModule,
     StarRatingsModule,
+    CreditCardInputModule,
     ComponentDocumentationRouterModule,
   ],
 })
