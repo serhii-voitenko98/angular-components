@@ -1,3 +1,23 @@
+<app-card [icon]="faInfoCircle" [title]="'Modal'" [subTitle]="'Components'">
+  <div card-body>
+    <app-modal #modal [title]="'Modal'">
+      <p>Some content</p>
+    </app-modal>
+  </div>
+
+  <div card-footer>
+    <button (click)="modal.open()">Open modal</button>
+  </div>
+</app-card>
+
+<app-card [icon]="faInfoCircle" [title]="'LinkedIn Post'" [subTitle]="'Components'">
+  <app-linkedin-post card-body></app-linkedin-post>
+</app-card>
+
+<app-card [icon]="faInfoCircle" [title]="'Twitter Post'" [subTitle]="'Components'">
+  <app-twitter-post card-body></app-twitter-post>
+</app-card>
+
 <app-card [icon]="faInfoCircle" [title]="'Credit Card Input'" [subTitle]="'Components'">
   <div card-body>
     <app-credit-card-input

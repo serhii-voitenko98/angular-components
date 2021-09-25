@@ -1,3 +1,9 @@
+<app-card [icon]="faInfoCircle" [title]="'Flatten'" [subTitle]="'Pipes'">
+  <div card-body>
+    {{ flattenData | appFlatten }}
+  </div>
+</app-card>
+
 <app-card [icon]="faInfoCircle" [title]="'Credit Card Formatter'" [subTitle]="'Pipes'">
   <div card-body>
     <p>

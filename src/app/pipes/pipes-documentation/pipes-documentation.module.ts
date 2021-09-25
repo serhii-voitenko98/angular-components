@@ -1,3 +1,4 @@
+import { FlattenModule } from './../flatten/flatten.module';
 import { CreditCardFormatterPipe } from './../credit-card-formatter/credit-card-formatter.pipe';
 import { CardModule } from './../../components/card/card.module';
 import { NgModule } from '@angular/core';
@@ -16,6 +17,7 @@ import { TruncatePipe } from '../truncate/truncate.pipe';
   imports: [
     CardModule,
     CommonModule,
+    FlattenModule,
     PipesDocumentationRoutingModule,
   ]
 })

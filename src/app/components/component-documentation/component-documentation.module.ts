@@ -1,3 +1,6 @@
+import { ModalModule } from './../modal/modal.module';
+import { LinkedinPostModule } from './../linkedin-post/linkedin-post.module';
+import { TwitterPostModule } from './../twitter-post/twitter-post.module';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -18,6 +21,7 @@ import { ComponentDocumentationRouterModule } from './component-documentation-ro
   ],
   imports: [
     CardModule,
+    ModalModule,
     FormsModule,
     CommonModule,
     LoaderModule,
@@ -25,6 +29,8 @@ import { ComponentDocumentationRouterModule } from './component-documentation-ro
     TopOfPageModule,
     ProgressBarModule,
     StarRatingsModule,
+    TwitterPostModule,
+    LinkedinPostModule,
     CreditCardInputModule,
     ComponentDocumentationRouterModule,
   ],
