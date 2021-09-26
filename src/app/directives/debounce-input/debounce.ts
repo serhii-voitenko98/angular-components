@@ -1,7 +1,7 @@
-export const debounce = (cb: () => unknown, time: number) => {
-  let timeout!: NodeJS.Timeout;
+export const debounce = () => {
+  let timeout!: ReturnType<typeof setTimeout>;
 
-  return () => {
+  return (cb: () => unknown, time: number) => {
     if (timeout) {
       clearTimeout(timeout);
     }

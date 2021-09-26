@@ -13,4 +13,8 @@ export class DirectivesDocumentationComponent {
     console.log(value);
   }
 
+  valueChanged(event: any) {
+    console.log(event);
+  }
+
 }

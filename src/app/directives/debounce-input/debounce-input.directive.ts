@@ -1,17 +1,15 @@
-import { Directive, HostListener, Output, EventEmitter } from '@angular/core';
-import { debounce } from './debounce';
+import { Directive, Output, Input, ElementRef } from '@angular/core';
+
+import { fromEvent } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
 
 @Directive({
-  selector: '[appDebounceInput]'
+  selector: 'input[appDebounceInput]'
 })
 export class DebounceInputDirective {
-  @Output() debouncedValue = new EventEmitter<string>();
+  @Input('appDebounceInput') timeInMs = 500;
 
-  @HostListener('input', ['$event']) inputEvent(event: Event) {
-    const target = event.target as HTMLInputElement;
+  @Output() debouncedValue = fromEvent(this.elRef.nativeElement, 'input').pipe(debounceTime(this.timeInMs));
 
-    debounce(() => {
-      this.debouncedValue.emit(target.value);
-    }, 500);
-  }
+  constructor(private elRef: ElementRef) {}
 }
