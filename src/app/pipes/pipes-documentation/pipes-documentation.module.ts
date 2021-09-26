@@ -1,23 +1,26 @@
-import { FlattenModule } from './../flatten/flatten.module';
-import { CreditCardFormatterPipe } from './../credit-card-formatter/credit-card-formatter.pipe';
-import { CardModule } from './../../components/card/card.module';
+import { CreditCardFormatterModule } from './../credit-card-formatter/credit-card-formatter.module';
+import { TruncateModule } from './../truncate/truncate.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { CardModule } from './../../components/card/card.module';
+import { FlattenModule } from './../flatten/flatten.module';
+import { FilterTermModule } from './../filter-term/filter-term.module';
+
 import { PipesDocumentationComponent } from './pipes-documentation.component';
 import { PipesDocumentationRoutingModule } from './pipes-documentation-routing.module';
-import { TruncatePipe } from '../truncate/truncate.pipe';
 
 @NgModule({
   declarations: [
-    TruncatePipe,
-    CreditCardFormatterPipe,
     PipesDocumentationComponent,
   ],
   imports: [
     CardModule,
     CommonModule,
     FlattenModule,
+    TruncateModule,
+    FilterTermModule,
+    CreditCardFormatterModule,
     PipesDocumentationRoutingModule,
   ]
 })

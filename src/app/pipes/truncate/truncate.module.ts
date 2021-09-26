@@ -10,5 +10,6 @@ import { TruncatePipe } from './truncate.pipe';
   imports: [
     CommonModule
   ],
+  exports: [TruncatePipe]
 })
 export class TruncateModule {}

@@ -1,3 +1,4 @@
+import { ToggleModule } from './../toggle/toggle.module';
 import { ModalModule } from './../modal/modal.module';
 import { LinkedinPostModule } from './../linkedin-post/linkedin-post.module';
 import { TwitterPostModule } from './../twitter-post/twitter-post.module';
@@ -25,6 +26,7 @@ import { ComponentDocumentationRouterModule } from './component-documentation-ro
     FormsModule,
     CommonModule,
     LoaderModule,
+    ToggleModule,
     AccordionModule,
     TopOfPageModule,
     ProgressBarModule,

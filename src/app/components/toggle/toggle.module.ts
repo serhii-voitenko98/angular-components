@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CreditCardFormatterPipe } from './credit-card-formatter.pipe';
+
+import { ToggleComponent } from './toggle.component';
 
 @NgModule({
   declarations: [
-    CreditCardFormatterPipe,
+    ToggleComponent,
   ],
   imports: [
     CommonModule,
   ],
   exports: [
-    CreditCardFormatterPipe,
+    ToggleComponent,
   ]
 })
-export class CreditCardFormatterModule { }
+export class ToggleModule { }

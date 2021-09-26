@@ -1,0 +1,5 @@
+<app-card [icon]="faInfoCircle" [title]="'Debounce click'" [subTitle]="'Directives'">
+  <div card-body>
+    <button [appDebounceClick]="1000" (debounceClick)="log($event)">Log</button>
+  </div>
+</app-card>
