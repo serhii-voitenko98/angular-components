@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CreditCardFormatterPipe } from '../credit-card-formatter.pipe';
-
-
+import { CreditCardFormatterPipe } from './credit-card-formatter.pipe';
 
 @NgModule({
   declarations: [
-    CreditCardFormatterPipe
+    CreditCardFormatterPipe,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+  ],
+  exports: [
+    CreditCardFormatterPipe,
   ]
 })
 export class CreditCardFormatterModule { }
