@@ -1,3 +1,9 @@
+<app-card [icon]="faInfoCircle" [title]="'Filter Term'" [subTitle]="'Pipes'">
+  <div card-body>
+    {{ ['Hello', 'World', 'Hello, world!', 'Bye, world!'] | appFilterTerm: 'HELLO' }}
+  </div>
+</app-card>
+
 <app-card [icon]="faInfoCircle" [title]="'Flatten'" [subTitle]="'Pipes'">
   <div card-body>
     {{ flattenData | appFlatten }}

@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-directives-documentation',
   templateUrl: './directives-documentation.component.html',
   styleUrls: ['./directives-documentation.component.scss']
 })
-export class DirectivesDocumentationComponent implements OnInit {
+export class DirectivesDocumentationComponent {
+  faInfoCircle = faInfoCircle;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  log(value: unknown) {
+    console.log(value);
   }
 
 }

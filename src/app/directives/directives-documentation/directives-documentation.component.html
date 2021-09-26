@@ -1,1 +1,5 @@
-<p>directives-documentation works!</p>
+<app-card [icon]="faInfoCircle" [title]="'LinkedIn Post'" [subTitle]="'Components'">
+  <div card-body>
+    <button [appDebounceClick]="1000" (debounceClick)="log($event)">Log</button>
+  </div>
+</app-card>

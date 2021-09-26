@@ -31,6 +31,7 @@ export class ComponentDocumentationComponent {
   loaderCountOfSeconds = 2;
   loaderType = LoaderTypeEnum.CIRCULAR;
   LoaderTypeEnum = LoaderTypeEnum;
+  toggleValue = true;
 
   ratingInputChanged(event: Event): void {
     const target = event.target as HTMLInputElement;
